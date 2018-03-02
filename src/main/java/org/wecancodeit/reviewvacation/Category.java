@@ -2,17 +2,19 @@ package org.wecancodeit.reviewvacation;
 
 import java.util.Collection;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@Entity
 public class Category {
 
 	@Id
 	@GeneratedValue
 	private long id;
 
-	@OneToMany(mappedBy = "Category")
+	@OneToMany(mappedBy = "category")
 	private Collection<Review> reviews;
 
 	private String type;
@@ -23,7 +25,7 @@ public class Category {
 
 	@SuppressWarnings("unused")
 
-	private Category() {
+	public Category() {
 	}
 
 	public long getId() {

@@ -23,13 +23,40 @@ public class Review {
 
 	private String title;
 
+	public Category getCategory() {
+		return category;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	private String description;
+
+	private String imageUrl;
+
 	public long getId() {
 		return id;
 	}
 
-	public Review(String title, Category category) {
+	public Review() {
+	}
+
+	public Review(String title, Category category, String description, String imageUrl) {
 		this.title = title;
 		this.category = category;
+		this.description = description;
+		this.imageUrl = imageUrl;
+	}
+
+	public Review(String title, String description, String imageUrl) {
+		this.title = title;
+		this.description = description;
+		this.imageUrl = imageUrl;
+	}
+
+	public String getDescription() {
+		return description;
 	}
 
 	@Override
