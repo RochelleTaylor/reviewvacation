@@ -14,29 +14,30 @@ public class ReviewController {
 	ReviewRepository reviewRepo;
 
 	@Resource
-	CategoryRepository reviewCategory;
+	CategoryRepository categoryRepo;
 
-	@RequestMapping(value = "reviews")
+	@RequestMapping(value = "review")
+	public String getAReview(@RequestParam Long id, Model model) {
+		model.addAttribute("review", reviewRepo.findOne(id));
+		return "review";
+	}
+
+	@RequestMapping(value = "/reviews")
 	public String reviews(Model model) {
 		model.addAttribute("reviews", reviewRepo.findAll());
 		return "reviews";
 	}
 
-	@RequestMapping(value = "category")
-	public String category(Model model) {
-		model.addAttribute("reviews", reviewRepo.findAll());
-		return "category";
+	@RequestMapping(value = "categories")
+	public String getAllCategories(Model model) {
+		model.addAttribute("categories", categoryRepo.findAll());
+		return "categories";
 	}
 
-	@RequestMapping("review")
-	public String getAReview(@RequestParam Long id, Model model) {
-		model.addAttribute("reviews", reviewRepo.findOne(id));
-		return "review";
-	}
-
-	@RequestMapping("category")
+	@RequestMapping(value = "reviewbycategory")
 	public String getACategory(@RequestParam Long id, Model model) {
-		model.addAttribute("category", categoryRepo.findOne(id));
+		model.addAttribute("reviews", reviewRepo.findAllByCategory(categoryRepo.findOne(id)));
 		return "category";
 	}
+
 }

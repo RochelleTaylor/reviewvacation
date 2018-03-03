@@ -23,7 +23,7 @@ public class CategoryPopulater implements CommandLineRunner {
 		Category mountains = new Category("mountains");
 		mountains = categoryRepo.save(mountains);
 		Review smokeymountains = new Review("Smokey Mountains", mountains, "Misty.....", "imageUrl");// clickable links
-																										// in html
+		smokeymountains = reviewRepo.save(smokeymountains); // in html
 
 	}
 }

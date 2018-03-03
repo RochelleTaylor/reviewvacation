@@ -43,7 +43,7 @@ public class ReviewVacationMappingTest {
 		entityManager.flush();
 		entityManager.clear();
 		category = categoryRepo.findOne(categoryId);
-		assertThat(category.getType(), is("Is Sunny"));
+		assertThat(category.getName(), is("Is Sunny"));
 	}
 
 	@Test
@@ -57,7 +57,7 @@ public class ReviewVacationMappingTest {
 		entityManager.clear();
 		review = reviewRepo.findOne(reviewId);
 
-		assertThat(review.getCategory().getType(), is("Is Sunny"));
+		assertThat(review.getCategory().getName(), is("Is Sunny"));
 
 	}
 	// @Test

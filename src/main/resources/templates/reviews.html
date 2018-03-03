@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+<title>A review</title>
+</head>
+<style>
+        img {
+            display: block;
+            max-width: 685px;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+        }
+    </style>
+
+<body>
+
+	<header>
+		<h1 th:each="review: ${reviews}" th:text="${review.title}" ></h1>
+	</header>
+	
+	<article th:each="review: ${reviews}">
+	
+		<h2 th:text="${review.id}" ></h2>
+		<p th:text="${review.type}"></p>
+		
+		<a href="http://localhost:8080/reviews">Back to home</a>
+	</article>
+
+</body>
+</html>
+
+
+

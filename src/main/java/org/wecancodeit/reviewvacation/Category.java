@@ -14,35 +14,16 @@ public class Category {
 	@GeneratedValue
 	private long id;
 
+	private String name;
+
 	@OneToMany(mappedBy = "category")
 	private Collection<Review> reviews;
-
-	private String type;
-
-	public Collection<Review> getReviews() {
-		return reviews;
-	}
-
-	@SuppressWarnings("unused")
 
 	public Category() {
 	}
 
-	public long getId() {
-		return id;
-	}
-
-	public Category(String type) {
-		this.type = type;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	@Override
-	public int hashCode() {
-		return ((Long) id).hashCode();
+	public Category(String name) {
+		this.name = name;
 	}
 
 	@Override
@@ -54,5 +35,34 @@ public class Category {
 			return false;
 		}
 		return id == ((Category) obj).id;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Collection<Review> getReviews() {
+		return reviews;
+	}
+
+	@Override
+	public int hashCode() {
+		return ((Long) id).hashCode();
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setReviews(Collection<Review> reviews) {
+		this.reviews = reviews;
 	}
 }
