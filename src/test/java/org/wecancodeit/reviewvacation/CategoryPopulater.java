@@ -37,12 +37,14 @@ public class CategoryPopulater implements CommandLineRunner {
 				"The Great Smoky Mountains are a mountain range rising along the Tennessee–North Carolina border in the southeastern United States. They are a subrange of the Appalachian Mountains, and form part of the Blue Ridge Physiographic Province",
 				"imageUrl");// clickable links
 		smokeymountains = reviewRepo.save(smokeymountains); // in html
-		Review kirkjufell = new Review("Kirkjufell", mountains,
+		Review kirkjufell = new Review("Iceland", mountains,
 				"Grundarfjörður's beautiful landmark is the most photographed mountain in Iceland. Its isolated position jutting out into the sea makes it a focal point for tourists and seamen alike. Surrounded by beaches, Kirkjufell has a lovely walking trail around it as well as a more challenging climb up to the top where bird and fish fossils can be found guide is recommended",
 				"imageUrl");
 		kirkjufell = reviewRepo.save(kirkjufell);
-		Review pigeonforge = new Review("Pigeon Forge", mountains, "", "imageUrl");
-		pigeonforge = reviewRepo.save(pigeonforge);
+		Review Denali = new Review("Alaska", mountains,
+				"Home to North America’s tallest peak, Denali has been a mecca for mountaineering and adventuring for more than a century. Today, the park continues to enchant climbers, pack-rafters, skiers, dog mushers and athletes seeking to test themselves against the raw, unchecked power of a truly wild landscape",
+				"imageUrl");
+		Denali = reviewRepo.save(Denali);
 
 	}
 }

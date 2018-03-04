@@ -16,11 +16,12 @@ public class Review {
 	@ManyToOne
 	private Category category;
 
-	public String getType() {
-		return type;
-	}
+	// public String getType() {
+	// return type;
+	// }
 
-	private String type;
+	// private String type;
+	private String imageUrl;
 
 	private String title;
 
@@ -34,8 +35,6 @@ public class Review {
 
 	@Lob
 	private String description;
-
-	private String imageUrl;
 
 	public long getId() {
 		return id;
