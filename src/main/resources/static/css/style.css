@@ -14,10 +14,15 @@ h1 {
     font-size: 3rem;
 }
 header {
-    background-color: lightgray;
+    background-color: rgba(211,211,211,0.6);
   
 }
+.reviewcontent{
+	font-weight: bold;
+	background-color: rgba(211,211,211,0.6);
+	
 
+}
 
 small {
     font-size: .8rem;
