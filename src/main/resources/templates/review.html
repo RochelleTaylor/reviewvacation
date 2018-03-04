@@ -5,6 +5,7 @@
 <head>
 <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
 <title>A review</title>
+
 </head>
 <style>
         img {
@@ -28,7 +29,7 @@
 		<img alt="Picture of vacation destination" th:src="${review.imageUrl}"/>
 		<p th:text="${review.description}"></p>
 		
-		<a href="http://localhost:8080/categories">Back to home</a>
+		<a th:href="@{/reviewcategory(id=${review.category.id})}" th:text="${review.category.name}"></a>
 	</article>
 
 </body>

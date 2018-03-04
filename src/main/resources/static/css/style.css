@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+* {
+    font-family: 'Roboto';
+}
+
+footer {
+    background-color: darkgray;
+   
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+}
+header {
+    background-color: lightgray;
+  
+}
+
+
+small {
+    font-size: .8rem;
+}
+.nav{
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+
+}
+.bold {
+  font-weight:bold;
+}     
