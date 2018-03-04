@@ -29,6 +29,10 @@ public class Review {
 		return category;
 	}
 
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
 	public String getTitle() {
 		return title;
 	}

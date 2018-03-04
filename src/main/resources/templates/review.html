@@ -25,6 +25,7 @@
 	<article th:each="review: ${review}">
 	
 		<h2 th:text="${review.title}" ></h2>
+		<img alt="Picture of vacation destination" th:src="${review.imageUrl}"/>
 		<p th:text="${review.description}"></p>
 		
 		<a href="http://localhost:8080/categories">Back to home</a>
