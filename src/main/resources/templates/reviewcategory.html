@@ -4,8 +4,8 @@
 
 
 <head>
-<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
-<title>A</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>A List Of Vacation Locations</title>
 </head>
 
 <body>
@@ -13,12 +13,13 @@
 		<h1>Choose A Location</h1>
 	</header>
 	
-	<div th:each="review: ${review}">
+	<div th:each="review: ${category.reviews}">
 		<h2>
 			<a th:href="@{/review(id=${review.id})}"  th:text="${review.title}"></a>
 		</h2>
 		
 	</div>
-
-
+<footer>
+</footer>
 </body>
+</html>

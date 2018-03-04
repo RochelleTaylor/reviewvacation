@@ -19,15 +19,15 @@
 <body>
 
 	<header>
-		<h1 th:each="review: ${reviews}" th:text="${review.title}" ></h1>
+		<h1 th:each="review: ${review}" th:text="${review.title}" ></h1>
 	</header>
 	
-	<article th:each="review: ${reviews}">
+	<article th:each="review: ${review}">
 	
-		<h2 th:text="${review.id}" ></h2>
-		<p th:text="${review.type}"></p>
+		<h2 th:text="${review.title}" ></h2>
+		<p th:text="${review.description}"></p>
 		
-		<a href="http://localhost:8080/reviews">Back to home</a>
+		<a href="http://localhost:8080/categories">Back to home</a>
 	</article>
 
 </body>

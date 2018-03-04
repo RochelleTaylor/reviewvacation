@@ -4,28 +4,23 @@
 
 
 <head>
-<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
-<title>A List of Vacation Reviews</title>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>A List Of Vacation Locations</title>
 </head>
 
 <body>
 	<header>
-		<h1>Choose a Vacation Location</h1>
+		<h1>Choose A Location</h1>
 	</header>
-	<p th:text="${reviews}"></p>
 	
-	<div th:each="review: ${reviews}">
+	
+	<div th:each="review: ${review}">
 		<h2>
-				<p th:text="${review.title}"></p>
-		
-		<!--	<a th:href="@{/review(id=${category.id})}"  th:text="${category.name}"></a>  -->
+			<a th:href="@{/review(id=${review.id})}"  th:text="${review.title}"></a>
 		</h2>
-		<h2 th:text="${review.id}" ></h2>
-		<p th:text="${review.title}"></p>
-		<p	th:text= "${review.description}"></p>
 		
 	</div>
-
-
+<footer>
+</footer>
 </body>
 </html>

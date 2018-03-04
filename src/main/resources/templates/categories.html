@@ -15,7 +15,7 @@
 	
 	<div th:each="category: ${categories}">
 		<h2>
-			<a th:href="@{/reviewbycategory(id=${category.id})}"  th:text="${category.name}"></a>
+			<a th:href="@{/reviewcategory(id=${category.id})}"  th:text="${category.name}"></a>
 		</h2>
 		
 	</div>

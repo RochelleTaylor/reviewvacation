@@ -34,10 +34,10 @@ public class ReviewController {
 		return "categories";
 	}
 
-	@RequestMapping(value = "reviewbycategory")
+	@RequestMapping(value = "reviewcategory")
 	public String getACategory(@RequestParam Long id, Model model) {
-		model.addAttribute("reviews", reviewRepo.findAllByCategory(categoryRepo.findOne(id)));
-		return "category";
+		model.addAttribute("category", categoryRepo.findOne(id));
+		return "reviewcategory";
 	}
 
 }

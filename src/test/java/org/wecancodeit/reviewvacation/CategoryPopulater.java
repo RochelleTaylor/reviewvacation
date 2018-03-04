@@ -20,7 +20,7 @@ public class CategoryPopulater implements CommandLineRunner {
 		beaches = categoryRepo.save(beaches);
 		Review caribbeans = new Review("Caribbeans", beaches,
 				"\"The Caribbean is a region that consists of the Caribbean Sea, its islands and the surrounding coasts. The region is southeast of the Gulf of Mexico and the North American mainland, east of Central America, and north of South America.\",",
-				"./images/barbuda.jpg");
+				"images/barbuda.jpg");
 		caribbeans = reviewRepo.save(caribbeans);
 		Review greece = new Review("Greece", beaches,
 				"			\"Greece has the longest coastline in Europe and is the southernmost country in Europe. The mainland has rugged mountains, forests, and lakes, but the country is well known for the thousands of islands dotting the blue Aegean Sea to the east, the Mediterranean Sea to the south, and the Ionian Sea to the west\",\r\n"
@@ -28,7 +28,7 @@ public class CategoryPopulater implements CommandLineRunner {
 				"./images/santorini.jpg");
 		greece = reviewRepo.save(greece);
 		Review hawaii = new Review("Hawaii", beaches, "Beautiful scenerey, total relaxation and fun for all!",
-				"/images/hawaii.jpg");
+				"./images/hawaii.jpg");
 		hawaii = reviewRepo.save(hawaii);
 		Category mountains = new Category("mountains");
 		mountains = categoryRepo.save(mountains);
