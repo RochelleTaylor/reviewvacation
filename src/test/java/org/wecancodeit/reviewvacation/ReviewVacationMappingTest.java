@@ -26,7 +26,7 @@ public class ReviewVacationMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Carribeans", "Is Sunny", "imageUrl");
+		Review review = new Review("Movie", "By genre", "imageUrl");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 		entityManager.flush();

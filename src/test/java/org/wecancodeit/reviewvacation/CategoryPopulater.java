@@ -16,27 +16,33 @@ public class CategoryPopulater implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Category movies = new Category("Movies");
-		movies = categoryRepo.save(movies);
-		Review fantasy = new Review("Black Panther", movies,
-				"\"Black Panther\" follows T'Challa who, after the events of \"Captain America: Civil War,\" returns home to the isolated, technologically advanced African nation of Wakanda to take his place as King. However, when an old enemy reappears on the radar, T'Challa's mettle as King and Black Panther is tested when he is drawn into a conflict that puts the entire fate of Wakanda and the world at risk",
-				"imageUrl");
-		fantasy = reviewRepo.save(fantasy);
-		Review comedy = new Review("Hot Rod", movies,
-				"Amateur stuntman Rod Kimble has a problem--his step-father Frank is a jerk. Frank picks on Rod, tosses him around like a rag doll in their weekly sparring sessions and definitely doesn't respect him, much less his stunts. But, when Frank falls ill, it's up to Rod to stage the jump of his life in order to save his step-father. The plan: Jump 15 buses, raise the money for Frank's heart operation, and then... kick his ass.",
-				"imageUrl");
-		comedy = reviewRepo.save(comedy);
+		Category beaches = new Category("beaches");
+		beaches = categoryRepo.save(beaches);
+		Review caribbeans = new Review("Caribbeans", beaches,
+				"\"The Caribbean is a region that consists of the Caribbean Sea, its islands and the surrounding coasts. The region is southeast of the Gulf of Mexico and the North American mainland, east of Central America, and north of South America.\",",
+				"./images/barbuda.jpg");
+		caribbeans = reviewRepo.save(caribbeans);
+		Review greece = new Review("Greece", beaches,
+				"			\"Greece has the longest coastline in Europe and is the southernmost country in Europe. The mainland has rugged mountains, forests, and lakes, but the country is well known for the thousands of islands dotting the blue Aegean Sea to the east, the Mediterranean Sea to the south, and the Ionian Sea to the west\",\r\n"
+						+ "",
+				"./images/santorini.jpg");
+		greece = reviewRepo.save(greece);
+		Review hawaii = new Review("Hawaii", beaches, "Beautiful scenerey, total relaxation and fun for all!",
+				"/images/hawaii.jpg");
+		hawaii = reviewRepo.save(hawaii);
+		Category mountains = new Category("mountains");
+		mountains = categoryRepo.save(mountains);
+		Review smokeymountains = new Review("Smokey Mountains", mountains,
 
-		// Category mountains = new Category("mountains");
-		// mountains = categoryRepo.save(mountains);
-		// Review smokeymountains = new Review("Smokey Mountains", mountains,
-
-		// "The Great Smoky Mountains are a mountain range rising along the
-		// Tennessee–North Carolina border in the southeastern United States. They are a
-		// subrange of the Appalachian Mountains, and form part of the Blue Ridge
-		// Physiographic Province",
-		// "imageUrl");// clickable links
-		// smokeymountains = reviewRepo.save(smokeymountains); // in html
+				"The Great Smoky Mountains are a mountain range rising along the Tennessee–North Carolina border in the southeastern United States. They are a subrange of the Appalachian Mountains, and form part of the Blue Ridge Physiographic Province",
+				"imageUrl");// clickable links
+		smokeymountains = reviewRepo.save(smokeymountains); // in html
+		Review kirkjufell = new Review("Kirkjufell", mountains,
+				"Grundarfjörður's beautiful landmark is the most photographed mountain in Iceland. Its isolated position jutting out into the sea makes it a focal point for tourists and seamen alike. Surrounded by beaches, Kirkjufell has a lovely walking trail around it as well as a more challenging climb up to the top where bird and fish fossils can be found guide is recommended",
+				"imageUrl");
+		kirkjufell = reviewRepo.save(kirkjufell);
+		Review pigeonforge = new Review("Pigeon Forge", mountains, "", "imageUrl");
+		pigeonforge = reviewRepo.save(pigeonforge);
 
 	}
 }
