@@ -6,6 +6,12 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <title>A List Of Vacation Locations</title>
+<style th:inline="text">
+body{
+	background-image: url([[${category.imageUrl}]]);
+	background-size: cover;
+	}
+	</style>
 </head>
 
 <body>
@@ -19,6 +25,8 @@
 		</h2>
 		
 	</div>
+		<p><a href="http://localhost:8080/categories">Back to home</a></p>
+	
 <footer>
 </footer>
 </body>

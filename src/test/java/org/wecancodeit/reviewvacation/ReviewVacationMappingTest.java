@@ -26,18 +26,18 @@ public class ReviewVacationMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadReview() {
-		Review review = new Review("Movie", "By genre", "imageUrl");
+		Review review = new Review("Caribeans", "By genre", "imageUrl");
 		review = reviewRepo.save(review);
 		long reviewId = review.getId();
 		entityManager.flush();
 		entityManager.clear();
 		review = reviewRepo.findOne(reviewId);
-		assertThat(review.getTitle(), is("Carribeans"));
+		assertThat(review.getTitle(), is("Caribeans"));
 	}
 
 	@Test
 	public void shouldSaveAndLoadCategory() {
-		Category category = new Category("Is Sunny");
+		Category category = new Category("Is Sunny", null);
 		category = categoryRepo.save(category);
 		long categoryId = category.getId();
 		entityManager.flush();
@@ -48,7 +48,7 @@ public class ReviewVacationMappingTest {
 
 	@Test
 	public void shouldSaveAndLoadAReviewWithACategory() {
-		Category category = new Category("Is Sunny");
+		Category category = new Category("Is Sunny", null);
 		category = categoryRepo.save(category);
 		Review review = new Review("Carribeans", category, "Is Sunny", "imageUrl");
 		review = reviewRepo.save(review);

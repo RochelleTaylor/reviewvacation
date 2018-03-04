@@ -16,7 +16,7 @@ public class CategoryPopulater implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Category beaches = new Category("beaches");
+		Category beaches = new Category("beaches", "/images/barbuda.jpg");
 		beaches = categoryRepo.save(beaches);
 		Review caribbeans = new Review("Caribbeans", beaches,
 				"\"The Caribbean is a region that consists of the Caribbean Sea, its islands and the surrounding coasts. The region is southeast of the Gulf of Mexico and the North American mainland, east of Central America, and north of South America.\",",
@@ -30,7 +30,7 @@ public class CategoryPopulater implements CommandLineRunner {
 		Review hawaii = new Review("Hawaii", beaches, "Beautiful scenerey, total relaxation and fun for all!",
 				"./images/hawaii.jpg");
 		hawaii = reviewRepo.save(hawaii);
-		Category mountains = new Category("mountains");
+		Category mountains = new Category("mountains", "./images/kirkjufell.jpg");
 		mountains = categoryRepo.save(mountains);
 		Review smokeymountains = new Review("Smokey Mountains", mountains,
 

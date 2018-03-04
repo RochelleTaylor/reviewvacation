@@ -15,6 +15,11 @@ public class Category {
 	private long id;
 
 	private String name;
+	private String imageUrl;
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
 
 	@OneToMany(mappedBy = "category")
 	private Collection<Review> reviews;
@@ -22,8 +27,9 @@ public class Category {
 	public Category() {
 	}
 
-	public Category(String name) {
+	public Category(String name, String imageUrl) {
 		this.name = name;
+		this.imageUrl = imageUrl;
 	}
 
 	@Override
